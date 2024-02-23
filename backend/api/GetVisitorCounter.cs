@@ -18,7 +18,7 @@ namespace Company.Function
             [CosmosDB(databaseName:"visitor-count-db", containerName: "visitor-count-container", Connection = "CosmosDbConnectionSetting", Id = "1", PartitionKey = "1")] out Counter updatedCounter, 
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            log.LogInformation("C# HTTP trigger function counted a visitor.");
 
             updatedCounter = counter;
             updatedCounter.Count++;

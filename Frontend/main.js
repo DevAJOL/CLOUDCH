@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const localApi = "http://localhost:7071/api/GetVisitorCounter";
-const prodApi = "https://getvisitorcounteer.azurewebsites.net/api/GetVisitorCounter";
+const prodApi =
+  "https://getvisitorcounterhttp.azurewebsites.net/api/GetVisitorCounter?code=Qr6tnGIwZxoO314meqqOxWhtetOIkdeZIyJ_nER_Nm1kAzFuz0lTPQ==";
 
 const getVisitCount = () => {
   let count = 0;
@@ -21,9 +22,6 @@ const getVisitCount = () => {
 
       // Get the last two digits of the count
       const lastTwoDigits = count % 100;
-
-      // Get the last digit of the count
-      const lastDigit = count % 10;
 
       // Determine the appropriate suffix based on the last two digits
       let suffix;
