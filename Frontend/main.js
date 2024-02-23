@@ -5,13 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const localApi = "http://localhost:7071/api/GetVisitorCounter";
-const functionApi =
-  "https://visitor-counter-fn.azurewebsites.net/api/visitor_counter";
+const prodApi = "https://getvisitorcounteer.azurewebsites.net/api/GetVisitorCounter";
 
 const getVisitCount = () => {
   let count = 0;
   console.log("Before fetch"); // Debug message
-  fetch(localApi)
+  fetch(prodApi)
     .then((response) => {
       console.log("After fetch"); // Debug message
       return response.json(); // Parse response as json
